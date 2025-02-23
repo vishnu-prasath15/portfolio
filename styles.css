@@ -1,0 +1,454 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background: #007BFF;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Home Section */
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Image on left */
+.home-image {
+    width: 33%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content on right */
+.home-content {
+    width: 50%;
+    padding: 50px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.home-content h1 span {
+    color: royalblue;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white;
+    background: royalblue;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* 📌 Responsive Design - Text Over Image */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column-reverse; /* Image at bottom */
+        text-align: center;
+        position: relative;
+    }
+
+    .home-image {
+        width: 100%;
+        height: 90vh;
+        margin-left: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .home-image img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        
+    }
+    
+    
+
+    .home-content {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+        backdrop-filter: blur(5px); /* Blurry effect for better readability */
+        margin-bottom: 90px;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+    
+    
+}
+/* About Section Styling */
+#about {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    gap: 40px;
+}
+
+/* Ensure text doesn't stretch too wide */
+.about-text {
+    max-width: 500px;
+}
+
+/* Heading and paragraph styling */
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Highlighted text */
+.highlight {
+    color: royalblue;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: royalblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: darkblue;
+}
+
+/* Image Styling */
+.about-image img {
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .about-image img {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .about-image img {
+        width: 230px;
+    }
+}
+
+/* Projects Section */
+#projects {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Project Container */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Updated Project Card */
+.project {
+    background: white;
+    padding: 40px; /* Increased padding */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    transition: transform 0.3s ease-in-out;
+    width: 400px; /* Increased width */
+    height: auto; /* Let content define height */
+    text-align: center;
+}
+
+.project:hover {
+    transform: scale(1.1); /* Enlarges on hover */
+}
+
+.project img {
+    width: 100%;
+    height: 250px; /* Set a fixed height for uniformity */
+    border-radius: 10px;
+    object-fit: cover; /* Ensure images fit nicely */
+    margin-bottom: 20px;
+}
+
+.project-details h3 {
+    font-size: 2rem; /* Bigger heading */
+    color: royalblue;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 1.2rem; /* Larger text */
+    color: #555;
+    line-height: 1.6;
+}
+
+
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: royalblue;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+.contact-item img {
+    width: 28px;
+    height: 28px;
+}
+
+.contact-item:hover {
+    background: royalblue;
+    color: white;
+}
+
+.contact-item:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+
+/* Footer */
+footer {
+    background: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+    }
+    
+    .home-content h1 {
+        font-size: 30px;
+    }
+    
+    .project {
+        width: 90%; /* Full width for smaller devices */
+        padding: 30px;
+    }
+
+    .project img {
+        height: 200px;
+    }
+
+    .project-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-details p {
+        font-size: 1.1rem;
+    }
+}
