@@ -145,7 +145,7 @@ nav {
 
     .home-image img {
         width: 100%;
-        height: 50%;
+        height: 100%;
         object-fit: cover;
         
     }
